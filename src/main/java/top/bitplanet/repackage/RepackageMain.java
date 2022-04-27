@@ -13,9 +13,9 @@ public class RepackageMain {
         String base = "/Users/neo/Desktop/bitplanet-devops 2";
 
         // 原包名
-        String originalPackage = "com.tansun.credit";
+        String originalPackage = "top.bitplanet.devops";
         // 目标包名
-        String destPackage = "top.bitplanet.devops";
+        String destPackage = "com.aaa.bbb";
 
 
 
@@ -51,8 +51,8 @@ public class RepackageMain {
         for (int i = allDirs.size() - 1; i >= 0; i--) {
             File f = allDirs.get(i);
             // 修改项目名
-            if (f.getName().startsWith("credit-")) {
-                String newName = f.getName().replaceFirst("credit-", "devops-");
+            if (f.getName().startsWith("devops-")) {
+                String newName = f.getName().replaceFirst("devops-", "bbb-");
                 f.renameTo(new File(f.getParentFile().getPath() + "/" + newName)) ;
                 f.delete();
             }
